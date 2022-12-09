@@ -34,10 +34,14 @@ function playRound(playerSelection, computerSelection) {
         final_str = win_str + " PAPER beats ROCK."
         playerScore++
     }
-    else // player = rock, computer = paper 
+    else if (playerSelection === 'ROCK' && computerSelection === 'PAPER') 
     {
         final_str = lose_str + " PAPER beats ROCK."
         computerScore++
+    }
+    else{
+        console.log('Invalid Input!')
+        return 0
     }
     console.log(playerSelection, computerSelection)
     return [final_str, playerScore, computerScore]
@@ -51,6 +55,7 @@ function game() {
         let playerChoice = prompt("What do you pick? Rock, Paper or Scissors?")
         let computerChoice = getComputerChoice();
         let results = playRound(playerChoice, computerChoice);
+        if(!results) continue
         final_playerScore += results[1];
         final_computerScore += results[2];
         console.log(results[0])
@@ -60,8 +65,11 @@ function game() {
     if (final_computerScore > final_playerScore) {
         console.log('You Are Defeated! Computer Won!')
     }
-    else{
+    else if(final_computerScore < final_playerScore){
         console.log('Victory! You have Won the game!')
+    }
+    else{
+        console.log('Game Tied!')
     }
     console.log('Rounds Over, Restart to play Again!')
 }
