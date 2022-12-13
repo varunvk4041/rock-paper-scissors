@@ -1,0 +1,70 @@
+body {
+    margin: 0 2px;
+    background: coral;
+}
+
+.container {
+    display: flex;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid black
+}
+
+img:hover {
+    box-shadow: 0 0 1rem black;
+    transform: scale(1.01)
+}
+
+.inputs {
+    padding-left: 10px;
+}
+
+.inputs div {
+    display: inline-block
+}
+
+.output {
+
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 40%
+}
+
+.output span {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+div p {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+    font-family: cursive
+}
+
+h1 {
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 4rem;
+    text-align: center;
+    color: maroon
+}
+
+.select_text,
+.output {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: cursive;
+    font-weight: 900;
+    color: darkgreen;
+}
+
+.select_text {
+    text-decoration: underline;
+}
